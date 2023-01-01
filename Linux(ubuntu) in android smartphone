@@ -1,0 +1,58 @@
+# Linux(ubuntu) in android smartphone
+
+Difficulty Level - Beginner/Intermediate
+
+ 
+
+# Requirements:
+
+- Smartphone/tablet… minimally recent…
+- At least 5 to 10 GB of free space
+- The slower the smartphone, the slower the machines will be.
+- Termux(project info:[https://github.com/termux/termux-app](https://github.com/termux/termux-app)) → FDROID version
+- Andronix Playstore or WEB→[https://andronix.app/](https://andronix.app/)
+
+## Possibilities:
+
+- Linux available:
+    - Ubuntu
+    - Kali
+    - Debian
+    - Arch
+    - Manjaro
+    - Fedora
+    - Others…(actually, distributions from other sources other than andronix can be installed, but in my opinion this is the most stable).
+
+
+### Process
+
+1. Go to a browser and download F-DROID.
+2. Go to Playstore and download andronix.
+3. Open F-DROID.
+4. Download termux terminal.
+5. Open termux and do apt update, then apt upgrade.
+6. Open andronix, choose the distribution, CLI (command line) or GLI (graphical interface) and the work environment.
+7. In order to choose the distribution, andronix provides a text that is automatically copied and which has to be pasted into the termux terminal.
+8. Configure system defaults and you are ready to use…
+9. If you want to access via VNC connection (Localhost by default), just connect the server with the vncserver-start command in termux.
+
+### Extras:
+
+- After installing any system (including termux itself) it must be updated, in this case:
+
+```bash
+apt install update && apt upgrade
+```
+
+- The distribution comes with tigervnc pre-installed, that is, it can be used on [localhost](http://localhost) or not depending on the selected options.
+To remotely access the system by IP, just put the -localhost option in.    
+
+```bash
+tigervncserver -localhost no
+```
+
+- The most stable installation option I tested was the Ubuntu 20.04/XFCE option.
+
+
+Link for the original article(Language PT-PT):
+https://responsible-lung-f78.notion.site/Linux-ubuntu-em-smartphone-android-867c75f07636426cb682de3cc1eb52f8
