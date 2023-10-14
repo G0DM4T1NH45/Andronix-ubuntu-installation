@@ -1,0 +1,61 @@
+# Linux(ubuntu) em smartphone android
+
+Nível de dificuldade - Iniciante/intermédio 
+
+ 
+
+# Requisitos:
+
+- Smartphone/tablet… minimamente recente…
+- Pelo menos 5 a 10 GB de espaço livre
+- Quanto mais lento for o smartphone mais lentas vão ser as máquinas.
+- Termux(informações sobre projeto:https://github.com/termux/termux-app) → FDROID version
+- Andronix Playstore ou WEB→https://andronix.app/
+
+## Possibilidades:
+
+- Linux disponíveis:
+    - Ubuntu
+    - Kali
+    - Debian
+    - Arch
+    - Manjaro
+    - Fedora
+    - Outros…(na realidade podem ser instaladas distribuições de outras fontes sem ser andronix mas a meu ver este é o mais estável).
+
+ 
+
+### Processo
+
+1. Ir a um browser e fazer download de F-DROID.
+2. Ir a Playstore e fazer download de andronix.
+3. Abrir F-DROID.
+4. Fazer download terminal termux.
+5. Abrir termux e fazer apt update, depois apt upgrade.
+6. Abrir andronix, escolher a distribuição, CLI(linha de comandos) ou GLI(interface gráfica)e o ambiente de trabalho.
+7. No fim de escolher a distribuição o andronix fornece um texto que é copiado automaticamente e que tem de ser colado no terminal termux.
+8. Configurar as predefinições do sistema e está pronto a usar…
+9. Se pretender aceder por ligação VNC(Localhost por default), basta ligar o servidor com o comando vncserver-start no termux.
+
+### Extras:
+
+- Após a instalação de qualquer sistema(inclusive o próprio termux) deve ser feita a sua atualização, neste caso:
+    
+    ```bash
+    apt install update && apt upgrade
+    ```
+    
+- A distribuição vem com a tigervnc pré-instalado, ou seja pode ser utilizado em [localhost](http://localhost) ou não dependendo das opções selecionadas. Para aceder remotamente ao sistema por ip basta colocar a opção -localhost no.
+    
+    Ou seja: 
+    
+    ```bash
+    tigervncserver -localhost no
+    ```
+    
+- A opção de instalação mais estável que eu testei foi a opção Ubuntu 20.04/XFCE.
+- Proot-distro
+    
+    Dá informações sobre as distribuições que podem ser instaladas na APP Termux.
+    
+- Para iniciar um Sistema basta seguir a lógica de:
